@@ -26,22 +26,34 @@ public class Player : Human
 
     public void Skill1()
     {
+        if (m_currAction != ProcessAction.ETypeAction.Idle)
+            return;
+            
         this.HeadPunch();
     }
 
     public void Skill2()
     {
+        if (m_currAction != ProcessAction.ETypeAction.Idle)
+            return;
+
         this.KidneyPunch();
     }
 
     public void Skill3()
     {
+        if (m_currAction != ProcessAction.ETypeAction.Idle)
+            return;
+            
         this.StomachPunch();
     }
 
 
     public void Defend()
     {
+        if (m_currAction != ProcessAction.ETypeAction.Idle)
+            return;
+            
         this.Dogde();
     }
 

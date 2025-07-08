@@ -48,7 +48,7 @@ public class ReceivedDamage : MonoBehaviour
             // Debug.Log("infoAction " + infoAction);
             m_healthOwner.TakeDamage(infoAction.m_damageValueOrigin);
 
-            if (m_healthOwner.CurrentHealth() < 0)
+            if (m_healthOwner.CurrentHealth() < 1)
             {
                 //! If Player so load Scene Menu.
                 if (m_owner.gameObject.name.Contains("Player"))
@@ -62,8 +62,6 @@ public class ReceivedDamage : MonoBehaviour
 
                     StartCoroutine(IEWaitAnimKnockout());
                     
-
-
                 }
 
                 return;
